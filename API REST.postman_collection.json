@@ -1,0 +1,1188 @@
+{
+	"info": {
+		"_postman_id": "9b2f23b2-dcdc-45a0-96fc-14fdcf868f5f",
+		"name": "API REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar fornecedores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/fornecedores"
+			},
+			"response": [
+				{
+					"name": "Listar fornecedores",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/fornecedores"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://developer.mozilla.org"
+						},
+						{
+							"key": "Content-Length",
+							"value": "222"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"de-ltlnBhQRHZJYdfu/GQ7+3R0FGRw\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Jun 2021 17:13:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"empresa\": \"teste edição5\",\n        \"categoria\": \"brinquedos\"\n    },\n    {\n        \"id\": 4,\n        \"empresa\": \"teste4\",\n        \"categoria\": \"brinquedos\"\n    },\n    {\n        \"id\": 5,\n        \"empresa\": \"teste4\",\n        \"categoria\": \"brinquedos\"\n    },\n    {\n        \"id\": 6,\n        \"empresa\": \"teste4\",\n        \"categoria\": \"brinquedos\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Cadastrar fornecedor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"empresa\": \"Maximum Rações LTDA\",\n\t\"categoria\": \"racao\",\n\t\"email\": \"contato@maximum.com\"\n}"
+				},
+				"url": "http://localhost:3000/api/fornecedores"
+			},
+			"response": [
+				{
+					"name": "Cadastrar fornecedor",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"empresa\": \"Maximum Rações LTDA\",\n\t\"categoria\": \"racao\",\n\t\"email\": \"contato@maximum.com\"\n}"
+						},
+						"url": "http://localhost:3000/api/fornecedores"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Location",
+							"value": "/api/fornecedores/3"
+						},
+						{
+							"key": "ETag",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 18 May 2020 15:11:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Length",
+							"value": "92"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"empresa\": \"Maximum Rações LTDA\",\n    \"categoria\": \"racao\",\n    \"email\": \"contato@maximum.com\"\n}"
+				},
+				{
+					"name": "Erro - campo inválido",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"empresa\": \"Maximum Rações LTDA\",\n\t\"email\": \"contato@maximum.com\"\n}"
+						},
+						"url": "http://localhost:3000/api/fornecedores"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "57"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"39-25BYa84/G/WzH1JksfJFiMYZGmg\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Sep 2020 20:30:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"mensagem\": \"O campo 'categoria' está inválido\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Pegar fornecedor",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3000/api/fornecedores/2"
+			},
+			"response": [
+				{
+					"name": "Pegar fornecedor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/api/fornecedores/2"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://developer.mozilla.org"
+						},
+						{
+							"key": "Content-Length",
+							"value": "182"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b6-S0m4xQKF/atA+aFJ48h3af7o0RQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Jun 2021 17:13:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"2\",\n    \"empresa\": \"teste edição5\",\n    \"email\": \"teste@teste\",\n    \"categoria\": \"brinquedos\",\n    \"dataCriacao\": \"2021-06-04T19:24:00.000Z\",\n    \"dataAtualizacao\": \"2021-06-05T01:25:00.000Z\",\n    \"versao\": 0\n}"
+				},
+				{
+					"name": "Erro - não encontrado",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/api/fornecedores/1"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"35-1Swo68KlU+s6/kv8pqszQOchcuc\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Sep 2020 20:29:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 0,\n    \"mensagem\": \"Fornecedor não foi encontrado!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Atualizar fornecedor",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"categoria\": \"brinquedos\"\n}"
+				},
+				"url": "http://localhost:3000/api/fornecedores/1"
+			},
+			"response": [
+				{
+					"name": "Atualizar fornecedor",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"categoria\": \"brinquedos\"\n}"
+						},
+						"url": "http://localhost:3000/api/fornecedores/1"
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Sep 2020 20:31:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Erro - nenhum campo fornecido",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n}"
+						},
+						"url": "http://localhost:3000/api/fornecedores/1"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "65"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"41-OGhX9Zy5XO4QF8JK9ZFIryAI5Xo\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Sep 2020 20:31:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"mensagem\": \"Não foram fornecidos dados para atualizar!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Apagar fornecedor",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:3000/api/fornecedores/1"
+			},
+			"response": [
+				{
+					"name": "Apagar fornecedor",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:3000/api/fornecedores/1"
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Sep 2020 20:31:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Listar produtos de fornecedor",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": "http://localhost:3000/api/fornecedores/2/produtos/"
+			},
+			"response": [
+				{
+					"name": "Listar produtos de fornecedor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": "http://localhost:3000/api/fornecedores/2/produtos/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://developer.mozilla.org"
+						},
+						{
+							"key": "Content-Length",
+							"value": "213"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d5-353Scoj2BbET1fqZW2vIB0XK72c\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Jun 2021 17:02:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"titulo\": \"almofada\"\n    },\n    {\n        \"id\": 3,\n        \"titulo\": \"teste\"\n    },\n    {\n        \"id\": 4,\n        \"titulo\": \"teste header\"\n    },\n    {\n        \"id\": 5,\n        \"titulo\": \"teste3\"\n    },\n    {\n        \"id\": 6,\n        \"titulo\": \"teste3\"\n    },\n    {\n        \"id\": 7,\n        \"titulo\": \"enviando header\"\n    },\n    {\n        \"id\": 8,\n        \"titulo\": \"edita produto\"\n    }\n]"
+				},
+				{
+					"name": "Erro fornecedor não encontrado",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"cadastro novo produto\",\r\n    \"preco\": 1,\r\n    \"estoque\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/fornecedores/202/produtos/"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://developer.mozilla.org"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"31-CIlsiJeSGmE4DzdsUvV4mxGT0BY\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Jun 2021 17:03:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 0,\n    \"mensagem\": \"Fornecedor não encontrado!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Cadastrar produto de fornecedor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"enviando header\",\r\n    \"preco\": \"19.90\",\r\n    \"estoque\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/fornecedores/2/produtos"
+			},
+			"response": [
+				{
+					"name": "Cadastrar produto de fornecedor",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"enviando header\",\r\n    \"preco\": 19.90,\r\n    \"estoque\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/fornecedores/2/produtos"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://developer.mozilla.org"
+						},
+						{
+							"key": "ETag",
+							"value": "0"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "1623171879260"
+						},
+						{
+							"key": "Location",
+							"value": "/api/fornecedores/2/produtos/9"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Jun 2021 17:04:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 9,\n    \"titulo\": \"enviando header\"\n}"
+				},
+				{
+					"name": "Erro campo inválido",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"enviando header\",\r\n    \"preco\": \"19.90\",\r\n    \"estoque\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/fornecedores/2/produtos"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://developer.mozilla.org"
+						},
+						{
+							"key": "Content-Length",
+							"value": "54"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"36-L43ZjRFxGQGn/M6/4vwdL6d75Go\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Jun 2021 17:04:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"mensagem\": \"O campo 'Preço' está inválido\"\n}"
+				},
+				{
+					"name": "Erro fornecedor não encontrado",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"enviando header\",\r\n    \"preco\": 19.90,\r\n    \"estoque\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/fornecedores/20/produtos"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://developer.mozilla.org"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"31-CIlsiJeSGmE4DzdsUvV4mxGT0BY\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Jun 2021 17:05:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 0,\n    \"mensagem\": \"Fornecedor não encontrado!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Atualizar produtos de fornecedor",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/pdf",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"editar produto\",\r\n    \"preco\": 1,\r\n    \"estoque\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/fornecedores/2/produtos/8"
+			},
+			"response": [
+				{
+					"name": "Atualizar produtos de fornecedor",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/pdf",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"editar produto\",\r\n    \"preco\": 1,\r\n    \"estoque\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/fornecedores/2/produtos/8"
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://developer.mozilla.org"
+						},
+						{
+							"key": "ETag",
+							"value": "0"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "1623171989000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Jun 2021 17:06:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Deletar produtos de fornecedor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/api/fornecedores/2/produtos/8"
+			},
+			"response": [
+				{
+					"name": "Deletar produtos de fornecedor",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/api/fornecedores/2/produtos/8"
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://developer.mozilla.org"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Jun 2021 17:09:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Diminuir estoque de produto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quantidade\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/fornecedores/2/produtos/4/diminuir-estoque"
+			},
+			"response": [
+				{
+					"name": "Diminuir estoque de produto",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantidade\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/fornecedores/2/produtos/4/diminuir-estoque"
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://developer.mozilla.org"
+						},
+						{
+							"key": "ETag",
+							"value": "5"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "1623172278000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Jun 2021 17:11:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Erro produto não encontrado",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantidade\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/fornecedores/2/produtos/400/diminuir-estoque"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://developer.mozilla.org"
+						},
+						{
+							"key": "Content-Length",
+							"value": "46"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2e-NIoOzc6LXlwo7YF/GHwaJvPjRXg\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Jun 2021 17:10:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 0,\n    \"mensagem\": \"Produto não encontrado!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Apenas Cabeçalho de Produto",
+			"request": {
+				"method": "HEAD",
+				"header": [],
+				"url": "http://localhost:3000/api/fornecedores/2/produtos/4"
+			},
+			"response": [
+				{
+					"name": "Apenas Cabeçalho de Produto",
+					"originalRequest": {
+						"method": "HEAD",
+						"header": [],
+						"url": "http://localhost:3000/api/fornecedores/2/produtos/4"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://developer.mozilla.org"
+						},
+						{
+							"key": "ETag",
+							"value": "5"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "1623172278000"
+						},
+						{
+							"key": "Content-Length",
+							"value": "173"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Jun 2021 17:11:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}

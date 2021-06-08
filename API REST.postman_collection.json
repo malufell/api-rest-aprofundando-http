@@ -1183,6 +1183,63 @@
 					"body": null
 				}
 			]
+		},
+		{
+			"name": "Listar fornecedores - V2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/v2/fornecedores"
+			},
+			"response": [
+				{
+					"name": "Listar fornecedores - V2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/v2/fornecedores"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://developer.mozilla.org"
+						},
+						{
+							"key": "Content-Length",
+							"value": "122"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7a-pDAcKt9ojbaF+aO8F6HE9gsTTfw\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Jun 2021 17:40:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"empresa\": \"teste edição5\"\n    },\n    {\n        \"id\": 4,\n        \"empresa\": \"teste4\"\n    },\n    {\n        \"id\": 5,\n        \"empresa\": \"teste4\"\n    },\n    {\n        \"id\": 6,\n        \"empresa\": \"teste4\"\n    }\n]"
+				}
+			]
 		}
 	]
 }

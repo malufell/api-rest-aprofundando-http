@@ -1,6 +1,6 @@
 ## API REST - aprofundando http
 
-### Sobre
+### Sobre o projeto:
 
 - Projeto em Node.js, com Express, MySQL, Sequelize
 - Implementa CRUD de "fornecedores" e "produtos", seguindo a convenção REST

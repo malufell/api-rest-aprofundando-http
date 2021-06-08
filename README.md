@@ -1,4 +1,4 @@
-## API REST
+## API REST - aprofundando http
 
 ### Sobre
 
@@ -6,14 +6,16 @@
 - Implementa CRUD de "fornecedores" e "produtos", seguindo a convenção REST
 - Serializa as respostas da API no formato JSON ou XML
 - Configura CORS (cabeçalho "Access-Control-Allow-Origin") para liberar acesso a API através de outro domínio
+- Inclui no cabeçalho das respostas de produtos: 'ETag' (versão), 'Last-Modified' e 'Location'
 - Configura OPTIONS, incluindo no cabeçalho das respostas os métodos HTTP permitidos em cada rota 
 - Retorna msgs de erro customizadas de acordo com o status do erro: 404, 400, 406, 500
-- Possui versionamento de rotas que altera os dados de resposta no método que lista fornecedores
-- Rotas (ver arquivo do Postman salvo na raiz do projeto)
+- Possui versionamento de rotas que altera os dados de resposta na listagem de fornecedores
+- Rotas (ver arquivo do Postman salvo na raiz do projeto com os métdos HTTP de cada rota)
   - /api/fornecedores = para coleção de fornecedores
   - /api/fornecedores/:idFornecedor = para acessar cada documento da coleção
   - /api/fornecedores/:idFornecedor/produtos = sub-coleção de produtos
   - /api/fornecedores/:idFornecedor/produtos/:idProduto = para cada documento da sub-coleção
+  - /api/fornecedores/:idFornecedor/produtos/:idProduto/diminuir-estoque = para ação de diminuir um item do estoque de produto
   - /api/v2/fornecedores = para coleção de fornecedores, com versionamento
 
 

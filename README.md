@@ -2,7 +2,8 @@
 
 ### Sobre o projeto:
 
-- Projeto em Node.js, com Express, MySQL, Sequelize
+Projeto em Node.js, com Express, MySQL, Sequelize.
+
 - Implementa CRUD de "fornecedores" e "produtos", seguindo a convenção REST
 - Serializa as respostas da API no formato JSON ou XML
 - Configura CORS (cabeçalho "Access-Control-Allow-Origin") para liberar acesso a API através de outro domínio

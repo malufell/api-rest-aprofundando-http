@@ -2,7 +2,7 @@
 
 ### Sobre o projeto:
 
-Projeto em Node.js, com Express, MySQL, Sequelize.
+Projeto em Node.js, com Express, MySQL, Sequelize e Jest.
 
 - Implementa CRUD de "fornecedores" e "produtos", seguindo a convenção REST
 - Serializa as respostas da API no formato JSON ou XML

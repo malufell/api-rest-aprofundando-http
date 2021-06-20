@@ -1,20 +1,20 @@
-const Sequelize = require("sequelize");
-const database = require("../../database/config")
+const Sequelize = require('sequelize')
+const database = require('../../database/config')
 
 const colunas = {
   empresa: {
     type: Sequelize.STRING,
-    allowNull: false,
+    allowNull: false
   },
   email: {
     type: Sequelize.STRING,
-    allowNull: false,
+    allowNull: false
   },
   categoria: {
     type: Sequelize.ENUM('ração', 'brinquedos'),
-    allowNull: false,
-  },
-};
+    allowNull: false
+  }
+}
 
 const opcoes = {
   freezeTableName: true,

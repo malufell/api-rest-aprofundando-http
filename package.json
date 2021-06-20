@@ -4,8 +4,10 @@
   "description": "",
   "main": "api/index.js",
   "scripts": {
-    "start": "nodemon api/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon api/index.js --ignore __tests__",
+    "lint": "./node_modules/.bin/eslint .",
+    "lint:fix": "./node_modules/.bin/eslint . --fix",
+    "test": "./node_modules/.bin/jest"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +17,13 @@
     "jsontoxml": "^1.0.1",
     "mysql2": "^2.2.5",
     "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "jest": "^27.0.4"
   }
 }

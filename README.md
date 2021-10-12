@@ -12,12 +12,12 @@ Projeto em Node.js, com Express, MySQL, Sequelize e Jest.
 - Retorna msgs de erro customizadas de acordo com o status do erro: 404, 400, 406, 500
 - Possui versionamento de rotas que altera os dados de resposta na listagem de fornecedores
 - Rotas (ver arquivo do Postman salvo na raiz do projeto com os métdos HTTP de cada rota)
-  - /api/fornecedores = para coleção de fornecedores
-  - /api/fornecedores/:idFornecedor = para acessar cada documento da coleção
-  - /api/fornecedores/:idFornecedor/produtos = sub-coleção de produtos
-  - /api/fornecedores/:idFornecedor/produtos/:idProduto = para cada documento da sub-coleção
-  - /api/fornecedores/:idFornecedor/produtos/:idProduto/diminuir-estoque = para ação de diminuir um item do estoque de produto
-  - /api/v2/fornecedores = para coleção de fornecedores, com versionamento
+  - `/api/fornecedores` = para coleção de fornecedores
+  - `/api/fornecedores/:idFornecedor` = para acessar cada documento da coleção
+  - `/api/fornecedores/:idFornecedor/produtos` = sub-coleção de produtos
+  - `/api/fornecedores/:idFornecedor/produtos/:idProduto` = para cada documento da sub-coleção
+  - `/api/fornecedores/:idFornecedor/produtos/:idProduto/diminuir-estoque` = para ação de diminuir um item do estoque de produto
+  - `/api/v2/fornecedores` = para coleção de fornecedores, com versionamento
 
 
 ### Como executar:
